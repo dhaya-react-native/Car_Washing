@@ -2,6 +2,7 @@
   "name": "car_washing",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "start": "expo start --dev-client",
     "android": "expo run:android",
@@ -15,12 +16,16 @@
     "@react-navigation/native": "^6.1.17",
     "@react-navigation/native-stack": "^6.10.0",
     "expo": "~51.0.18",
+    "expo-constants": "~16.0.2",
+    "expo-device": "~6.0.2",
+    "expo-notifications": "~0.28.11",
     "expo-router": "^3.5.17",
     "expo-status-bar": "~1.12.1",
     "expo-updates": "~0.25.21",
     "firebase": "^10.12.3",
     "i": "^0.3.7",
-    "nativewind": "^2.0.11",
+    "native-notify": "^4.0.4",
+    "nativewind": "^4.0.36",
     "npm": "^10.8.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
@@ -35,7 +40,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
-    "tailwindcss": "^3.3.2"
+    "tailwindcss": "^3.4.6"
   },
   "private": true
 }
