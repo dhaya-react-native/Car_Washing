@@ -7,7 +7,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 // import OnboardingScreen from "./screens/OnboardingScreen";
 // import LoginScreen from "./screens/LoginScreen";
 // import HomeScreen from "./screens/HomeScreen";
-
+import "./global.css"
 const Stack = createNativeStackNavigator();
 
 function WelcomeScreen() {
