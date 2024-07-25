@@ -1,5 +1,5 @@
 // import { StatusBar } from "expo-status-bar";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import * as Updates from "expo-updates";
 import { StyleSheet, Text, View, Button, Image, Alert } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
