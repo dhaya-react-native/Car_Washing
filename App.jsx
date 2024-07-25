@@ -1,9 +1,9 @@
 // import { StatusBar } from "expo-status-bar";
 import React from "react";
-// import registerNNPushToken from "native-notify";
 import { StyleSheet, Text, View, Button, Image, Alert } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
+// import registerNNPushToken from "native-notify";
 // import OnboardingScreen from "./screens/OnboardingScreen";
 // import LoginScreen from "./screens/LoginScreen";
 // import HomeScreen from "./screens/HomeScreen";
@@ -55,7 +55,6 @@ function WelcomeScreen() {
 }
 export default function App() {
   // registerNNPushToken(22632, "lNJbTZxTsqGUZCd6BfbdW2");
-
   return (
     <NavigationContainer>
       <Stack.Navigator
