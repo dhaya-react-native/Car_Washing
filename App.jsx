@@ -1,6 +1,7 @@
 // import { StatusBar } from "expo-status-bar";
 import React, { useEffect, useState } from "react";
 import * as Updates from "expo-updates";
+import * as Device from "expo-device";
 import { StyleSheet, Text, View, Button, Image, Alert } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
@@ -34,7 +35,17 @@ function WelcomeScreen() {
   }, []);
   return (
     <View style={styles.container}>
-      <Button title="Fetch Update" onPress={onFetchUpdateAsync} />
+      <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+        <Text style={{ color: "white" }}>
+          {Device.manufacturer}: {Device.modelName}
+        </Text>
+      </View>
+      <Button
+        color="blue"
+        style={styles.button}
+        title="Fetch Update"
+        onPress={onFetchUpdateAsync}
+      />
       <Image style={styles.logo} source={{}} />
       <View style={{ padding: "20" }}>
         <Text style={styles.buttontxt}>
