@@ -23,6 +23,26 @@
     "web": {
       "favicon": "./assets/favicon.png",
       "bundler": "metro"
+    },
+    "extra": {
+      "eas": {
+        "projectid": "8b23c52c-6bb3-4d36-962c-d9b9d3960688",
+        "projectId": "b07cf04c-ca0c-40c3-8eef-332e29908ec5"
+      }
+    },
+    "plugins": [
+      [
+        "expo-updates",
+        {
+          "username": "expo-dev-client"
+        }
+      ]
+    ],
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/b07cf04c-ca0c-40c3-8eef-332e29908ec5"
     }
   }
 }

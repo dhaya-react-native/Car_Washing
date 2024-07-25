@@ -1,5 +1,6 @@
 // import { StatusBar } from "expo-status-bar";
 import React from "react";
+import * as Updates from "expo-updates";
 import { StyleSheet, Text, View, Button, Image, Alert } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
@@ -11,12 +12,29 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 const Stack = createNativeStackNavigator();
 
 function WelcomeScreen() {
+  async function onFetchUpdateAsync() {
+    try {
+      const update = await Updates.checkForUpdateAsync();
+      if (update.isAvailable) {
+        await Updates.fetchUpdateAsync();
+        await Updates.reloadAsync();
+      }
+    } catch (error) {
+      alert(`Error fetching latest Expo update: ${error}`);
+    }
+  }
   onDeleteBTN = () => {
     console.log("OnDelete!");
     alert(" OnDelete");
   };
+  useEffect(() => {
+    return () => {
+      onFetchUpdateAsync();
+    };
+  }, []);
   return (
     <View style={styles.container}>
+      <Button title="Fetch Update" onPress={onFetchUpdateAsync} />
       <Image style={styles.logo} source={{}} />
       <View style={{ padding: "20" }}>
         <Text style={styles.buttontxt}>
@@ -55,6 +73,7 @@ function WelcomeScreen() {
 }
 export default function App() {
   // registerNNPushToken(22632, "lNJbTZxTsqGUZCd6BfbdW2");
+
   return (
     <NavigationContainer>
       <Stack.Navigator
